@@ -10,9 +10,9 @@ namespace EntityFramework.Models.DTO
 
     public record ProductDTO
     (
-        string Name,
-        string Description,
-        string Category,
+        [Length(3, 18)] string Name,
+        [Length(8, 64)] string Description,
+        [Length(8, 32)] string Category,
         decimal Price
     );
 }
