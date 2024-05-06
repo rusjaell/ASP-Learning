@@ -27,7 +27,7 @@ namespace EntityFramework
 
             var app = builder.Build();
 
-            var service = app.Services.GetService<FirstService>();
+            var service = app.Services.GetService<IServiceTest>();
             service.LogMessage("Test Message Log");
             service.PrintTypeName();
 
