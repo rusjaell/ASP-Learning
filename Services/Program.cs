@@ -27,6 +27,10 @@ namespace EntityFramework
 
             var app = builder.Build();
 
+            var service = app.Services.GetService<FirstService>();
+            service.LogMessage("Test Message Log");
+            service.PrintTypeName();
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
